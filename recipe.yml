@@ -7,6 +7,4 @@ install:
   - ai_image_bulk_alt_text
 config:
   import:
-    ai: '*'
     ai_image_alt_text: '*'
-    ai_image_bulk_alt_text: '*'
