@@ -2,6 +2,9 @@
 
 Provides a recipe to automatically generate and fill the alt text of an image field using AI.
 
+
+> Apply the Varbase AI Default recipe, or make sure it has been applied before applying this recipe.
+
 Add the recipe using composer:
 ```
 composer require drupal/varbase_ai_image_alt:~1.0.0
