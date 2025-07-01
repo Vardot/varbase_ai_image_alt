@@ -11,5 +11,12 @@ Change directory to `/web` or `/docroot`
 
 Run the Drupal recipe bash script:
 ```
+bash core/scripts/drupal recipe recipes/contrib/varbase_ai_image_alt
+```
+
+or 
+
+Run the Drush recipe command:
+```
 drush recipe recipes/contrib/varbase_ai_image_alt
 ```
