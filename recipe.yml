@@ -8,3 +8,16 @@ install:
 config:
   import:
     ai_image_alt_text: '*'
+  actions:
+    user.role.site_admin:
+      grantPermissions:
+        - 'generate ai alt tags'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'generate ai alt tags'
+    user.role.content_admin:
+      grantPermissions:
+        - 'generate ai alt tags'
+    user.role.editor:
+      grantPermissions:
+        - 'generate ai alt tags'
