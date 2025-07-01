@@ -16,5 +16,5 @@
     "drupal/ai": "~1.1.0",
     "drupal/ai_image_alt_text": "~1"
   },
-  "version": "1.0.1"
+  "version": "1.0.x-dev"
 }
