@@ -1,5 +1,5 @@
 name: Varbase AI Image Alt
-description: Provides a recipe to automatically generate and fill the alt text of an image field using AI.
+description: Grants Varbase user roles the permission to generate AI image alt text, provided by the Drupal CMS AI ecosystem.
 type: Varbase AI
 install:
   - ai
@@ -18,6 +18,6 @@ config:
     user.role.content_admin:
       grantPermissions:
         - 'generate ai alt tags'
-    user.role.editor:
+    user.role.content_editor:
       grantPermissions:
         - 'generate ai alt tags'

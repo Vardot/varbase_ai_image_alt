@@ -1,6 +1,6 @@
 {
   "name": "drupal/varbase_ai_image_alt",
-  "description": "Provides a recipe to automatically generate and fill the alt text of an image field using AI.",
+  "description": "Grants Varbase user roles the permission to generate AI image alt text, provided by the Drupal CMS AI ecosystem.",
   "keywords": ["image", "media", "recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "image", "alt text", "alternative text"],
   "type": "drupal-recipe",
   "license": "GPL-2.0-or-later",
@@ -12,9 +12,8 @@
     }
   ],
   "require": {
-    "drupal/core": "~10 || ~11",
-    "drupal/ai": "~1.1.0",
-    "drupal/ai_image_alt_text": "~1"
+    "drupal/core": "~11.3.0",
+    "drupal/drupal_cms_ai": "~2"
   },
   "version": "1.0.x-dev"
 }

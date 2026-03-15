@@ -1,25 +1,39 @@
 # Varbase AI Image Alt
 
-Provides a recipe to automatically generate and fill the alt text of an image field using AI.
+Grants Varbase user roles the permission to generate AI image alt text, provided by the Drupal CMS AI ecosystem.
 
+The AI image alt text functionality (modules and configuration) is provided by the `drupal_cms_ai` default recipe. This recipe extends that by granting the `generate ai alt tags` permission to Varbase's editorial roles: `site_admin`, `seo_admin`, `content_admin`, and `content_editor`.
 
-> Apply the Varbase AI Default recipe, or make sure it has been applied before applying this recipe.
+## Requirements
+
+- The Drupal CMS AI default recipe (`drupal/drupal_cms_ai`) must be applied before this recipe.
+
+## Installation
 
 Add the recipe using composer:
 ```
-composer require drupal/varbase_ai_image_alt:~1.0.0
+composer require drupal/varbase_ai_image_alt:~2
 ```
 
 Change directory to `/web` or `/docroot`
 
 Run the Drupal recipe bash script:
 ```
-bash core/scripts/drupal recipe recipes/contrib/varbase_ai_image_alt
+bash core/scripts/drupal recipe ../recipes/varbase_ai_image_alt
 ```
 
-or 
+or
 
 Run the Drush recipe command:
 ```
-drush recipe recipes/contrib/varbase_ai_image_alt
+drush recipe ../recipes/varbase_ai_image_alt
 ```
+
+## What this recipe does
+
+Grants the `generate ai alt tags` permission to:
+
+- `site_admin`
+- `seo_admin`
+- `content_admin`
+- `content_editor`
