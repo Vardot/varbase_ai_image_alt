@@ -1,3 +1,5 @@
+[![Varbase](https://raw.githubusercontent.com/Vardot/varbase/11.0.x/images/varbase-logo.png)](https://www.drupal.org/project/varbase)
+
 # Varbase AI Image Alt
 
 Grants Varbase user roles the permission to generate AI image alt text, provided by the Drupal CMS AI ecosystem.
