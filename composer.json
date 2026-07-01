@@ -12,7 +12,7 @@
     }
   ],
   "require": {
-    "drupal/core": "~11.3.0",
+    "drupal/core": "~11.4.0",
     "drupal/drupal_cms_ai": "~2"
   },
   "version": "2.0.x-dev"
