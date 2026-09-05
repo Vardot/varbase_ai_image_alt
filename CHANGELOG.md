@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-09-06
+### Changed
+- Set the recipe version to `2.0.0` for the first stable release on the 2.0.x line.
+- Update the version badge to `2.0.0` in `README.md`.
+
 ## [2.0.0-rc1] - 2026-08-15
 ### Changed
 - Update the version badge to `2.0.0-rc1` in `README.md`.
@@ -25,7 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial 2.0.x release of the Varbase AI Image Alt recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-rc1...2.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0...2.0.x
+[2.0.0]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-rc1...2.0.0
 [2.0.0-rc1]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-beta1...2.0.0-rc1
 [2.0.0-beta1]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-alpha2...2.0.0-beta1
 [2.0.0-alpha2]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-alpha1...2.0.0-alpha2
