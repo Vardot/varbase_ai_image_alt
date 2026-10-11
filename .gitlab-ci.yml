@@ -1,0 +1,89 @@
+################################################################################
+# GitLab CI for the Varbase AI Image Alt recipe, on the Drupal GitLab CI
+# templates: https://project.pages.drupalcode.org/gitlab_templates/
+################################################################################
+
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    # Pinned on purpose. Bump it together with _CURL_TEMPLATES_REF.
+    ref: '1.17.2'
+    file:
+      - '/includes/include.drupalci.main.yml'
+      - '/includes/include.drupalci.variables.yml'
+      - '/includes/include.drupalci.workflows.yml'
+
+variables:
+  _CURL_TEMPLATES_REF: '1.17.2'
+  _ALL_VALIDATE_ALLOW_FAILURE: '0'
+  # The verbatim GPL text, not ours to spell-check.
+  _CSPELL_IGNORE_PATHS: 'LICENSE'
+  # A recipe ships no PHP, JavaScript or CSS for these to check.
+  SKIP_PHPSTAN: '1'
+  SKIP_ESLINT: '1'
+  SKIP_STYLELINT: '1'
+
+composer:
+  variables:
+    DRUPAL_CORE: '11.4.9'
+
+composer-lint:
+  allow_failure: false
+
+cspell:
+  allow_failure: false
+
+# The template runs PHPCS only where PHP files exist; run it on the recipe YAML.
+phpcs:
+  rules:
+    - when: on_success
+  allow_failure: false
+
+yaml lint:
+  stage: validate
+  needs: []
+  image: python:3.12-slim
+  allow_failure: false
+  script:
+    - pip install --quiet --no-cache-dir pyyaml
+    - |
+      python3 - <<'PY'
+      import glob, sys, yaml
+      failed = 0
+      for path in ['recipe.yml'] + sorted(glob.glob('config/**/*.yml', recursive=True)):
+          try:
+              yaml.safe_load(open(path, encoding='utf-8'))
+              print('OK', path)
+          except Exception as error:
+              print('INVALID', path, error)
+              failed += 1
+      sys.exit(1 if failed else 0)
+      PY
+
+# Install Drupal, apply Varbase AI Default (the documented prerequisite) and
+# this recipe, then check what the recipe set up.
+apply recipe:
+  extends: .testing-job-base
+  needs: [composer]
+  allow_failure: false
+  services:
+    - !reference [.with-database]
+  script:
+    - !reference [.simpletest-db]
+    - composer require drupal/varbase_ai_default:~1.0.0 --update-with-all-dependencies
+    - DRUSH="$COMPOSER_BIN_DIR/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT"
+    - $DRUSH site:install standard --db-url=$SIMPLETEST_DB --yes
+    # The Varbase roles the recipe grants permissions to.
+    - for role in site_admin seo_admin content_admin editor; do $DRUSH role:create $role $role; done
+    - $DRUSH recipe $CI_PROJECT_DIR/recipes/varbase_ai_default --yes
+    - $DRUSH recipe $DRUPAL_PROJECT_FOLDER --yes
+    - |
+      ENABLED="$($DRUSH pm:list --status=enabled --field=name)"
+      for module in ai_image_alt_text ai_image_bulk_alt_text; do
+        grep -qx "$module" <<< "$ENABLED" || { echo "$module is not enabled"; exit 1; }
+        echo "$module is enabled"
+      done
+    - |
+      for role in site_admin seo_admin content_admin editor; do
+        grep -q "generate ai alt tags" <<< "$($DRUSH config:get user.role.$role permissions)" || { echo "$role lacks 'generate ai alt tags'"; exit 1; }
+        echo "$role has 'generate ai alt tags'"
+      done
