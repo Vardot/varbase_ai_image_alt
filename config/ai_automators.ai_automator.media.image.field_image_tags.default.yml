@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.field.media.image.field_image_tags
+id: media.image.field_image_tags.default
+label: Image tags
+rule: llm_taxonomy
+input_mode: base
+weight: 101
+worker_type: direct
+entity_type: media
+bundle: image
+field_name: field_image_tags
+edit_mode: false
+base_field: field_image_description
+prompt: "Choose up to 5 tags that fit this image description:\r\n\r\n{{ context }}\r\n\r\nExisting tags in the \"Image Classification\" vocabulary:\r\n{{ value_options_comma }}\r\n\r\nReuse an existing tag whenever one fits, including one that means the same thing in other words. Only create a new tag when none fits. Editors use these tags to find a matching image for their content, so keep them general rather than too specific.\r\n\r\nA new tag should be a short phrase of up to 3 words, for example \"sunny summer day\", or a single word, for example \"people\"."
+token: ''
+plugin_config:
+  automator_enabled: 1
+  automator_rule: llm_taxonomy
+  automator_mode: base
+  automator_base_field: field_image_description
+  automator_prompt: "Choose up to 5 tags that fit this image description:\r\n\r\n{{ context }}\r\n\r\nExisting tags in the \"Image Classification\" vocabulary:\r\n{{ value_options_comma }}\r\n\r\nReuse an existing tag whenever one fits, including one that means the same thing in other words. Only create a new tag when none fits. Editors use these tags to find a matching image for their content, so keep them general rather than too specific.\r\n\r\nA new tag should be a short phrase of up to 3 words, for example \"sunny summer day\", or a single word, for example \"people\"."
+  automator_token: ''
+  automator_edit_mode: 0
+  automator_label: Image tags
+  automator_weight: '101'
+  automator_worker_type: direct
+  automator_ai_provider: default_json
+  automator_clean_up: ''
+  automator_search_similar_tags: 0

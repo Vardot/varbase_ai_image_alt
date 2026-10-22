@@ -1,7 +1,7 @@
 {
   "name": "drupal/varbase_ai_image_alt",
-  "description": "Grants Varbase user roles the permission to generate AI image alt text, provided by the Drupal CMS AI ecosystem.",
-  "keywords": ["image", "media", "recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "image", "alt text", "alternative text"],
+  "description": "AI for images in Varbase: alt text on demand, and a description and tags written on save.",
+  "keywords": ["image", "media", "recipe", "Varbase recipes", "varbase recipe", "Drupal recipes", "drupal recipe", "image", "alt text", "alternative text", "image tags", "image description"],
   "type": "drupal-recipe",
   "license": "GPL-2.0-or-later",
   "authors": [

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_tags
+    - media.type.image
+    - taxonomy.vocabulary.image_classification
+id: media.image.field_image_tags
+field_name: field_image_tags
+entity_type: media
+bundle: image
+label: 'Image tags'
+description: 'Tags that describe the image. When left empty, AI picks or creates up to 5 tags on save.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      image_classification: image_classification
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
