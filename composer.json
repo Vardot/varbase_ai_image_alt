@@ -13,7 +13,9 @@
   ],
   "require": {
     "drupal/core": "~11.4.0",
-    "drupal/drupal_cms_ai": "~2"
+    "drupal/drupal_cms_ai": "~2",
+    "drupal/field_group": "~4.0",
+    "drupal/tagify": "~2.0"
   },
   "version": "2.0.x-dev"
 }

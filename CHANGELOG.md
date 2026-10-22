@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - AI image description and tags on save, in the Image Classification vocabulary, with term permissions for Varbase editorial roles.
 
+### Changed
+- The Image description and Image tags fields sit in an open "AI description and tags" field group on the Image media form, and the tags use the Tagify widget. The Add Media upload form from content types leaves them out; no field is added to any content type (#3628829).
+
 ## [2.0.0] - 2026-09-06
 ### Changed
 - Set the recipe version to `2.0.0` for the first stable release on the 2.0.x line.

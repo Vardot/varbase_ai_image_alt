@@ -8,7 +8,7 @@
 AI for images in Varbase, built on the Drupal CMS AI ecosystem:
 
 - **Alt text, on demand.** The `ai_image_alt_text` button and bulk action from the `drupal_cms_ai` default recipe, with the `generate ai alt tags` permission for Varbase's editorial roles.
-- **Description and tags, on save.** When an image is saved with them empty, AI writes an **Image description** from the image, then picks or creates up to 5 **Image tags** in the **Image Classification** vocabulary from that description. Editors can type their own; a filled field is left alone.
+- **Description and tags, on save.** When an image is saved with them empty, AI writes an **Image description** from the image, then picks or creates up to 5 **Image tags** in the **Image Classification** vocabulary from that description. Editors can type their own; a filled field is left alone. Both fields sit in an open **AI description and tags** group on the Image media form, and the tags use the Tagify widget. Varbase content types take images through their media fields and **Add Media**, which opens the media library to pick an image or upload one; its upload form leaves the two fields out to stay short, and AI fills them on save. The recipe adds fields to the Image media type only, never to a content type.
 
 The field, vocabulary and image style machine names match the [AI Image Classification recipe](https://www.drupal.org/project/ai_recipe_image_classification), so the two can be applied on one site without duplicating fields.
 
@@ -42,7 +42,7 @@ drush recipe ../recipes/varbase_ai_image_alt
 
 ## What this recipe does
 
-- Adds `field_image_description` and `field_image_tags` to the Image media type, the `image_classification` vocabulary and the `scale_for_ai_vision` image style, and shows both fields on the default form display.
+- Adds `field_image_description` and `field_image_tags` to the Image media type, the `image_classification` vocabulary and the `scale_for_ai_vision` image style, and shows both fields on the `default` form display in an open `details` field group (`group_ai_image_details`, Field Group), with the Tagify widget on the tags. The `media_library` form display does not show them.
 - Adds two AI Automators that run on save: `media.image.field_image_description.default` (vision) and `media.image.field_image_tags.default` (taxonomy, from the description).
 - Grants `site_admin`, `seo_admin`, `content_admin` and `content_editor`:
   - `generate ai alt tags`

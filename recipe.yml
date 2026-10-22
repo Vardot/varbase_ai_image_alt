@@ -6,9 +6,11 @@ install:
   - ai_automators
   - ai_image_alt_text
   - ai_image_bulk_alt_text
+  - field_group
   - image
   - media
   - options
+  - tagify
   - taxonomy
   - token
 config:
@@ -27,7 +29,7 @@ config:
       grantPermissions: *image_ai_permissions
     user.role.content_editor:
       grantPermissions: *image_ai_permissions
-    # The description and tags fields on the Image media form.
+    # The description and tags fields on the Image media form, in an open group.
     core.entity_form_display.media.image.default:
       setComponents:
         -
@@ -43,12 +45,35 @@ config:
         -
           name: field_image_tags
           options:
-            type: entity_reference_autocomplete_tags
+            type: tagify_entity_reference_autocomplete_widget
             weight: 3
             region: content
             settings:
               match_operator: CONTAINS
               match_limit: 10
-              size: 60
               placeholder: ''
+              suggestions_dropdown: 1
+              show_entity_id: 0
+              show_info_label: 0
+              info_label: ''
             third_party_settings: {  }
+      setThirdPartySetting:
+        module: field_group
+        key: group_ai_image_details
+        value:
+          children:
+            - field_image_description
+            - field_image_tags
+          label: 'AI description and tags'
+          region: content
+          parent_name: ''
+          weight: 2
+          format_type: details
+          format_settings:
+            classes: ''
+            show_empty_fields: false
+            id: ''
+            label_as_html: false
+            open: true
+            description: 'Written by AI when the image is saved with them empty.'
+            required_fields: false
