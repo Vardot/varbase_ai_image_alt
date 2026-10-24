@@ -6,11 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Added
-- AI image description and tags on save, in the Image Classification vocabulary, with term permissions for Varbase editorial roles.
 
-### Changed
-- The Image description and Image tags fields sit in an open "AI description and tags" field group on the Image media form, and the tags use the Tagify widget. The Add Media upload form from content types leaves them out; no field is added to any content type (#3628829).
+## [2.0.1] - 2026-10-24
+### Added
+- Add more integration with AI Automators for better media generation and picking ([#3628829](https://www.drupal.org/i/3628829)).
 
 ## [2.0.0] - 2026-09-06
 ### Changed
@@ -35,7 +34,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial 2.0.x release of the Varbase AI Image Alt recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0...2.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.1...2.0.x
+[2.0.1]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0...2.0.1
 [2.0.0]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-rc1...2.0.0
 [2.0.0-rc1]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-beta1...2.0.0-rc1
 [2.0.0-beta1]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-alpha2...2.0.0-beta1
