@@ -6,6 +6,7 @@ Guidance for AI coding agents working on the Varbase AI Image Alt recipe.
 
 Read the project history and context first:
 
+- **Documentation** lives on the Varbase docs site: [docs.varbase.vardot.com](https://docs.varbase.vardot.com/developers/understanding-varbase/varbase-ai-recipes/varbase-ai-image-alt). Keep `README.md` short and link there; add no `docs/` folder.
 - **`CHANGELOG.md`** — what changed in each release, newest first. Read it before
   proposing changes so you follow the established direction and versioning.
 - **Merge request comments and history** on

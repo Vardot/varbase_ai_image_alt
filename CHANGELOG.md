@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Move the documentation to docs.varbase.vardot.com ([#3633021](https://www.drupal.org/i/3633021)).
+
 ## [2.0.1] - 2026-10-24
 ### Added
 - Add more integration with AI Automators for better media generation and picking ([#3628829](https://www.drupal.org/i/3628829)).
