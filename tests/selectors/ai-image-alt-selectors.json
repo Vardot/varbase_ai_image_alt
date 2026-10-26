@@ -1,0 +1,9 @@
+{
+  "css": {
+    "alternative text field": "input[name='field_media_image[0][alt]']",
+    "generate with ai button": "input.ai-alt-text-generation"
+  },
+  "xpath": {
+    "allow the image AI this time": "//*[contains(@class,'context-notice')][contains(.,'Transfer image and meta data')]//button[contains(.,'Yes (this time)')]"
+  }
+}

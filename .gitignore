@@ -1,0 +1,5 @@
+.gitlab-ci-local/
+/node_modules
+tests/reports/
+tests/screenshots/
+tests/videos/

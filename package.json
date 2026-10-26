@@ -1,0 +1,18 @@
+{
+  "name": "varbase_ai_image_alt",
+  "description": "Varbase functional testing suite (varbase-e2e: Playwright + Cucumber) for the Varbase AI Image Alt recipe, run on a Varbase 11 site.",
+  "license": "GPL-2.0-or-later",
+  "private": true,
+  "author": "Vardot",
+  "engines": {
+    "node": ">= 20.0"
+  },
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:headed": "HEADLESS=false cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports"
+  },
+  "dependencies": {
+    "@vardot/varbase-e2e": "^2.0.7"
+  }
+}
