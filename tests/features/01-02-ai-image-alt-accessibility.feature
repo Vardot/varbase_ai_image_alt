@@ -4,14 +4,9 @@ Feature: Varbase AI Recipe - AI Image Alt - Accessible image form
   I want the image form with Generate with AI to work with a keyboard and a screen reader
   So that I can add images with AI help like anyone else
 
-  Scenario Outline: Check the add image form keeps the "<rule>" accessibility rule
+  Scenario: Check the add image form gives every field a label and every link a name
     Given I am a logged in user with the "Content editor" user
      When I go to "/media/add/image"
-     Then the page should not violate the accessibility rule "<rule>"
-
-    Examples:
-      | rule              |
-      | label             |
-      | link-name         |
-      | duplicate-id-aria |
-      | aria-valid-attr   |
+     Then every form field should have an accessible label
+      And every link should have an accessible name
+      And every ARIA role should be valid

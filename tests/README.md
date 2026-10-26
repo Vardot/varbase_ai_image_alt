@@ -6,9 +6,11 @@ Varbase 11 site with this recipe applied.
 | Feature | Covers |
 | --- | --- |
 | `01-01-ai-image-alt-media-form.feature` | Each editorial role gets Generate with AI after agreeing to send the image; it writes the alt text; a saved image gets its description from AI |
-| `01-02-ai-image-alt-accessibility.feature` | The add image form keeps the label, link name and ARIA rules |
+| `01-02-ai-image-alt-accessibility.feature` | The add image form gives every field a label and every link a name |
 
 The upload form elements and the consent button are named selectors in `tests/selectors/ai-image-alt-selectors.json`.
+
+One custom step, in `tests/step-definitions/files.steps.js`, attaches an upload to a file field by its label.
 
 ## Run it
 
@@ -27,6 +29,6 @@ CI applies Drupal CMS AI before the recipe. It sets up an amazee.ai trial as the
 is needed and the alt text and description come from a real vision model. Drupal CMS AI asks before an image
 goes to the AI service; the scenarios answer "Yes (this time)", as an editor would.
 
-The add image form is held to pinned accessibility rules rather than the full serious gate: the admin theme's
+The add image form is held to the field label, link name and ARIA role checks rather than the full serious gate: the admin theme's
 help toggles have no names and a details summary is low in contrast, which comes from the theme, not this
 recipe.
