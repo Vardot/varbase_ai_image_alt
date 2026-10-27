@@ -17,5 +17,5 @@
     "drupal/field_group": "~4.0",
     "drupal/tagify": "~2.0"
   },
-  "version": "2.0.x-dev"
+  "version": "2.0.2"
 }
