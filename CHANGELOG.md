@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.3] - 2026-10-29
+### Added
+- A Claude Code agent and skill for applying and verifying the recipe ([#3633948](https://www.drupal.org/i/3633948)).
+
+### Changed
+- Disable Drupal CMS telemetry in CI ([#3633853](https://www.drupal.org/i/3633853)).
+- Update the version badge to `2.0.3` in `README.md`.
+
 ## [2.0.2] - 2026-10-27
 ### Added
 - Automated functional acceptance tests for alt text on the media form and accessibility, run in CI on a fresh Varbase 11 site ([#3633128](https://www.drupal.org/i/3633128)).
@@ -43,7 +51,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial 2.0.x release of the Varbase AI Image Alt recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.2...2.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.3...2.0.x
+[2.0.3]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.2...2.0.3
 [2.0.2]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.1...2.0.2
 [2.0.1]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0...2.0.1
 [2.0.0]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0-rc1...2.0.0
