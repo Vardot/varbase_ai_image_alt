@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.4] - 2026-11-14
+### Changed
+- Update Node.js to `>= 24.0` in `package.json` and the GitLab CI ([#3635708](https://www.drupal.org/i/3635708)).
+- Update the version badge to `2.0.4` in `README.md`.
+
 ## [2.0.3] - 2026-10-29
 ### Added
 - A Claude Code agent and skill for applying and verifying the recipe ([#3633948](https://www.drupal.org/i/3633948)).
@@ -51,7 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial 2.0.x release of the Varbase AI Image Alt recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.3...2.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.4...2.0.x
+[2.0.4]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.3...2.0.4
 [2.0.3]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.2...2.0.3
 [2.0.2]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.1...2.0.2
 [2.0.1]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.0...2.0.1
