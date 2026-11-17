@@ -21,6 +21,8 @@ variables:
   SKIP_PHPSTAN: '1'
   SKIP_ESLINT: '1'
   SKIP_STYLELINT: '1'
+  # PHP 8.5 for the drupalci job images (the template default is PHP 8.3).
+  _TARGET_PHP: "8.5"
 
 composer:
   variables:
