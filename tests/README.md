@@ -29,6 +29,12 @@ CI applies Drupal CMS AI before the recipe. It sets up an amazee.ai trial as the
 is needed and the alt text and description come from a real vision model. Drupal CMS AI asks before an image
 goes to the AI service; the scenarios answer "Yes (this time)", as an editor would.
 
+When amazee.ai cannot be reached, `tests/scripts/ai-provider.sh` sets the AI module's Echo test provider
+instead, prints "amazee.ai unavailable: running with the Echo test provider" and exports `AI_PROVIDER=echoai`.
+The two Generate with AI scenarios check only that the fields are filled, not what they say, so they still run
+on Echo and prove the automators run; every scenario still runs. A scenario that needs a real model's reply is
+tagged `@live-ai` and skipped in that mode. `AMAZEE_UNREACHABLE=1` forces it.
+
 The add image form is held to the field label, link name and ARIA role checks rather than the full serious gate: the admin theme's
 help toggles have no names and a details summary is low in contrast, which comes from the theme, not this
 recipe.
