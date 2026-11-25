@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.6] - 2026-11-25
+### Changed
+- Use caret constraints and allow Drupal 11.4 and later and Drupal 12 in Varbase AI Image Alt recipe ([#3638924](https://git.drupalcode.org/project/varbase_ai_image_alt/-/work_items/3638924)).
+- Update the version badge to `2.0.6` in `README.md`.
+
 ## [2.0.5] - 2026-11-23
 ### Changed
 - Change the default PHP version to PHP 8.5 in the GitLab CI ([#3638920](https://www.drupal.org/i/3638920)).
@@ -61,7 +66,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial 2.0.x release of the Varbase AI Image Alt recipe.
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.5...2.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.6...2.0.x
+[2.0.6]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.5...2.0.6
 [2.0.5]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.4...2.0.5
 [2.0.4]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.3...2.0.4
 [2.0.3]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/2.0.2...2.0.3
