@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-11-27
+### Changed
+- Use caret constraints with ^11.4 || ^12.0 to allow Drupal 11.5 and Drupal 12 in Varbase AI Image Alt recipe ([#3638925](https://git.drupalcode.org/project/varbase_ai_image_alt/-/work_items/3638925)).
+
 ## [1.0.3] - 2026-11-23
 ### Changed
 - Change the default PHP version to PHP 8.5 in the GitLab CI ([#3638920](https://www.drupal.org/i/3638920)).
@@ -27,7 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of the Varbase AI Image Alt recipe: installs AI, AI Image Alt Text and AI Image Bulk Alt Text to generate and fill the alt text of image fields with AI. See [#3502267](https://www.drupal.org/i/3502267).
 
-[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/1.0.3...1.0.x
+[Unreleased]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/1.0.4...1.0.x
+[1.0.4]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/1.0.3...1.0.4
 [1.0.3]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/1.0.2...1.0.3
 [1.0.2]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/1.0.1...1.0.2
 [1.0.1]: https://git.drupalcode.org/project/varbase_ai_image_alt/-/compare/1.0.0...1.0.1
